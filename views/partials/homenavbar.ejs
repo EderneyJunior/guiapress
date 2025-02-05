@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+        GuiaPress
+    </a>
+
+    <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+            <a href="/" class="nav-link">HOME</a>
+        </li>
+        <% for(const category of categories){ %>
+            <li class="nav-item">
+                <a href="/category/<%= category.slug %>" class="nav-link"><%= category.title %></a>
+            </li>
+        <% } %>
+    </ul>
+</nav>

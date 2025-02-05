@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+<%- include('partials/homenavbar') %>
+<div class="container">
+    <hr>
+    <div class="jumbotron">
+        <h1 class="display-4">Bem vindo!</h1>
+        <p class="lead">Este é um simples blog do guia do programador.</p>
+        <hr class="my-4">
+        <p>Descrissão detalhada aqui.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Leia mais</a>
+        </p>
+    </div>
+    <hr>
+    <% for(const article of articles){ %>
+        <div class="card">
+            <div class="card-header">
+                <h2><%= article.title %></h2>
+            </div>
+            <div class="card-body">
+                <a class="btn btn-success" href="/<%= article.slug %>">Ler artigo</a>
+            </div>
+        </div>
+        <br>
+    <% } %>
+    <div class="row">
+        <div class="col col-12">
+            <a style="float: right;" href="/articles/page/1">Next >>></a>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<%- include('partials/footer')  %>
